@@ -1,0 +1,29 @@
+<head>
+  <title>pusher</title>
+</head>
+
+<body>
+  {{> pusher}}
+  
+</body>
+
+<template name="pusher">
+  <h1> {{greeting}}</h1>
+        
+    {{#each msgs}}
+      {{> msgs}}
+    {{/each}}
+    
+    <div id="msg_b_send">
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="mesage" placeholder="Message" >
+        <input type="button" value="Send" id="pushit" />
+	</div>
+</template>
+
+
+<template name="msgs">
+<div id="msg" class="{{selected}}">
+{{name}} : {{msg}}
+    </div>
+</template>
